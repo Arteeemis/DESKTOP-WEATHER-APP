@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Network)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -20,6 +21,8 @@ set(PROJECT_SOURCES
         day.h
         mainwindow.ui
         day.ui
+        weatherAPI.h
+        weatherAPI.cpp
 
 )
 
@@ -49,6 +52,7 @@ else()
 endif()
 
 target_link_libraries(MyWeatherApp PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(MyWeatherApp PRIVATE Qt6::Network)
 
 set_target_properties(MyWeatherApp PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

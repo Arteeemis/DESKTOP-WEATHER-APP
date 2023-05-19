@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     palette.setBrush(QPalette::Window, bkgnd);
     this->setPalette(palette);
     // Earth Img
-    QPixmap pix(":/resources/img/globe.png");
+    QPixmap pix(":/resources/img/cute_earth.png");
     int w = ui->Earth->width();
     int h = ui->Earth->height();
     ui->Earth->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
