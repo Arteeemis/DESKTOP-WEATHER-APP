@@ -14,6 +14,11 @@ Day::Day(QWidget *parent) :
     palette.setBrush(QPalette::Window, bkgnd);
     this->setPalette(palette);
     //
+    //this->setStyleSheet("QFrame#{border-style: solid;"
+    //                    "border-width: 3px;"
+    //                    "border-radius: 4px;"
+    //                    "background-color: rgb(247, 147, 30);"
+    //                    "border-color:  rgb(255, 252, 245);}");
 }
 
 Day::~Day()
@@ -27,13 +32,10 @@ void Day::slot()
     ui->City->setText("city_param");
     ui->Date->setText("date_param");
     ui->Temp->setText("temp_param");
-    ui->WeatherDiscription->setText("wdisr_param");
     ui->Pressure->setText("press_param");
     ui->MaxTemp->setText("maxT_param");
     ui->MinTemp->setText("minT_param");
-    ui->Humidity->setText("humid_param");
     ui->WindSpeed->setText("wspeed_param");
-
 }
 
 

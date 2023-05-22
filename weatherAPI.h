@@ -1,4 +1,3 @@
-
 #ifndef WEATHERAPI_H
 #define WEATHERAPI_H
 #include <QEventLoop>
