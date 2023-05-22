@@ -8,12 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // bg Img
-    QPixmap bkgnd(":/resources/img/bkg.jpg");
-    bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-    QPalette palette;
-    palette.setBrush(QPalette::Window, bkgnd);
-    this->setPalette(palette);
     // Earth Img
     QPixmap pix(":/resources/img/cute_earth.png");
     int w = ui->Earth->width();
@@ -21,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Earth->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
     //
     this->setWindowTitle("WeatherApp");
+    // прозрачность кнопки
+    ui->label->setStyleSheet("background: transparent;");
+    //
     day = new Day;
 
     connect(this, &MainWindow::signal, day, &Day::slot);
@@ -34,6 +31,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_monday_clicked()
 {
+    day->setStyleSheet("background-color: rgb(247, 147, 30);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
@@ -44,6 +42,7 @@ void MainWindow::on_monday_clicked()
 
 void MainWindow::on_tuesday_clicked()
 {
+    day->setStyleSheet("background-color: rgb(127, 205, 238);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
@@ -54,6 +53,7 @@ void MainWindow::on_tuesday_clicked()
 
 void MainWindow::on_wednesday_clicked()
 {
+    day->setStyleSheet("background-color: rgb(7, 64, 123);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
@@ -64,6 +64,7 @@ void MainWindow::on_wednesday_clicked()
 
 void MainWindow::on_thursday_clicked()
 {
+    day->setStyleSheet("background-color: rgb(14, 15, 59);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
