@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QPixmap>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -12,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap pix(":/resources/img/cute_earth.png");
     int w = ui->Earth->width();
     int h = ui->Earth->height();
-    ui->Earth->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio));
+    ui->Earth->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     //
     this->setWindowTitle("WeatherApp");
     // прозрачность кнопки
@@ -22,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(this, &MainWindow::signal, day, &Day::slot);
     connect(day, &Day::mainwindow, this, &MainWindow::show);
+
 }
 
 MainWindow::~MainWindow()

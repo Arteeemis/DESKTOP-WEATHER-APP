@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "weatherAPI.h"
 #include <QCoreApplication>
-#include <QDebug>
+//
 #include <chrono>
 #include <ctime>
 #include <QApplication>
