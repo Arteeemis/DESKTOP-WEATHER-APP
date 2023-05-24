@@ -37,19 +37,20 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>50</y>
-      <width>231</width>
+      <y>60</y>
+      <width>251</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
+      <family>Segoe UI</family>
       <pointsize>18</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">border-style: solid;
+border-radius: 8px;
 border-width: 3px;
 border-color: rgb(247, 147, 30);</string>
     </property>
@@ -68,8 +69,8 @@ border-color: rgb(247, 147, 30);</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -91,8 +92,8 @@ background-color: rgb(247, 147, 30);</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -114,8 +115,8 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -137,8 +138,8 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -154,21 +155,22 @@ border-radius: 15px;</string>
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>151</width>
+      <width>201</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>18</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>20</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>Ваш город:</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;Ваш город&lt;/span&gt;&lt;span style=&quot; font-weight:400; color:#0e0f3b;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget">
@@ -182,7 +184,7 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
+      <family>Segoe UI Semibold</family>
      </font>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -190,7 +192,7 @@ border-radius: 15px;</string>
       <widget class="QLabel" name="label_22">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI Semibold</family>
          <pointsize>15</pointsize>
         </font>
        </property>
@@ -198,7 +200,7 @@ border-radius: 15px;</string>
         <string notr="true">background: transparent;</string>
        </property>
        <property name="text">
-        <string>6.00 A.M.</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;6.00 A.M.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -209,7 +211,7 @@ border-radius: 15px;</string>
       <widget class="QLabel" name="label_24">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI Semibold</family>
          <pointsize>15</pointsize>
         </font>
        </property>
@@ -217,7 +219,7 @@ border-radius: 15px;</string>
         <string notr="true">background: transparent;</string>
        </property>
        <property name="text">
-        <string>12.00 A.M.</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;12.00 A.M.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -228,7 +230,7 @@ border-radius: 15px;</string>
       <widget class="QLabel" name="label_23">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI Semibold</family>
          <pointsize>15</pointsize>
         </font>
        </property>
@@ -236,7 +238,7 @@ border-radius: 15px;</string>
         <string notr="true">background: transparent;</string>
        </property>
        <property name="text">
-        <string>18.00 P.M.</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;18.00 P.M.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -247,7 +249,7 @@ border-radius: 15px;</string>
       <widget class="QLabel" name="label_25">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI Semibold</family>
          <pointsize>14</pointsize>
         </font>
        </property>
@@ -255,7 +257,7 @@ border-radius: 15px;</string>
         <string notr="true">background: transparent;</string>
        </property>
        <property name="text">
-        <string>15*</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;15*&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -266,7 +268,7 @@ border-radius: 15px;</string>
       <widget class="QLabel" name="label_26">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI Semibold</family>
          <pointsize>15</pointsize>
         </font>
        </property>
@@ -274,7 +276,7 @@ border-radius: 15px;</string>
         <string notr="true">background: transparent;</string>
        </property>
        <property name="text">
-        <string>15*</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;15*&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -285,7 +287,7 @@ border-radius: 15px;</string>
       <widget class="QLabel" name="label_27">
        <property name="font">
         <font>
-         <family>Times New Roman</family>
+         <family>Segoe UI Semibold</family>
          <pointsize>15</pointsize>
         </font>
        </property>
@@ -293,7 +295,7 @@ border-radius: 15px;</string>
         <string notr="true">background: transparent;</string>
        </property>
        <property name="text">
-        <string>15*</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;15*&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -313,15 +315,16 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>15</pointsize>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>Сейчас:</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;Сейчас:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -338,15 +341,16 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>15</pointsize>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>Скорость ветра:</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;Скорость ветра:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -363,15 +367,16 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>15</pointsize>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>Скорость</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;Скорость&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -388,7 +393,7 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
+      <family>Segoe UI</family>
      </font>
     </property>
     <property name="styleSheet">
@@ -403,21 +408,22 @@ border-radius: 15px;</string>
      <rect>
       <x>20</x>
       <y>100</y>
-      <width>161</width>
-      <height>41</height>
+      <width>181</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>18</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>День, число</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;День, число&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_29">
@@ -431,15 +437,16 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>15</pointsize>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>Температура</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;Температура&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -448,13 +455,14 @@ border-radius: 15px;</string>
       <x>30</x>
       <y>310</y>
       <width>169</width>
-      <height>27</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="autoFillBackground">
@@ -473,16 +481,16 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>360</y>
-      <width>169</width>
+      <x>40</x>
+      <y>400</y>
+      <width>121</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -490,32 +498,33 @@ border-radius: 15px;</string>
 </string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Temp&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Температура:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_11">
+   <widget class="QLabel" name="MondayWeather">
     <property name="geometry">
      <rect>
-      <x>28</x>
-      <y>400</y>
+      <x>30</x>
+      <y>360</y>
       <width>171</width>
       <height>35</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Wdiscr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Описание:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -524,16 +533,16 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_17">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>40</x>
       <y>440</y>
-      <width>169</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -541,7 +550,7 @@ border-radius: 15px;</string>
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Pressure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Минимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -550,23 +559,23 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_20">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>40</x>
       <y>480</y>
-      <width>169</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;TempLow&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Максимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -578,13 +587,14 @@ border-radius: 15px;</string>
       <x>220</x>
       <y>310</y>
       <width>169</width>
-      <height>34</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -609,8 +619,9 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -634,8 +645,9 @@ border-radius: 15px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -648,19 +660,19 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="label_37">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>360</y>
-      <width>169</width>
+      <x>230</x>
+      <y>400</y>
+      <width>121</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -668,33 +680,7 @@ border-radius: 15px;</string>
 </string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Temp&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_12">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>360</y>
-      <width>171</width>
-      <height>34</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Temp&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Температура:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -703,16 +689,16 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>360</y>
-      <width>169</width>
+      <x>420</x>
+      <y>400</y>
+      <width>121</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -720,82 +706,111 @@ border-radius: 15px;</string>
 </string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Temp&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Температура:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_14">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>400</y>
-      <width>169</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Wdiscr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_15">
+   <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
       <x>610</x>
       <y>400</y>
-      <width>161</width>
-      <height>35</height>
+      <width>121</width>
+      <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: transparent;</string>
+     <string notr="true">background: transparent;
+</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Wdiscr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Температура:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_16">
+   <widget class="QLabel" name="TuesdayWeather">
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>400</y>
-      <width>169</width>
+      <y>360</y>
+      <width>171</width>
       <height>35</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Wdiscr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Описание:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="WednesdayWeather">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>360</y>
+      <width>171</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Описание:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ThursdayWeather">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>360</y>
+      <width>171</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Описание:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -804,16 +819,16 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_18">
     <property name="geometry">
      <rect>
-      <x>608</x>
+      <x>230</x>
       <y>440</y>
-      <width>171</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -821,7 +836,7 @@ border-radius: 15px;</string>
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Pressure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Минимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -830,16 +845,16 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_19">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>420</x>
       <y>440</y>
-      <width>169</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -847,7 +862,7 @@ border-radius: 15px;</string>
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Pressure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Минимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -856,16 +871,16 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_33">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>610</x>
       <y>440</y>
-      <width>169</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -873,7 +888,7 @@ border-radius: 15px;</string>
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Pressure&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Минимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -882,23 +897,23 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_34">
     <property name="geometry">
      <rect>
-      <x>608</x>
+      <x>230</x>
       <y>480</y>
-      <width>171</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;TempLow&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Максимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -907,23 +922,23 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_35">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>420</x>
       <y>480</y>
-      <width>169</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;TempLow&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Максимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -932,26 +947,290 @@ border-radius: 15px;</string>
    <widget class="QLabel" name="label_36">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>610</x>
       <y>480</y>
-      <width>169</width>
+      <width>101</width>
       <height>34</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Times New Roman</family>
-      <pointsize>13</pointsize>
+      <family>Segoe UI Semibold</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background: transparent;</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;TempLow&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Максимум:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MondayTemp">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>400</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MondayMin">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>440</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="MondayMax">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>480</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TuesdayMax">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>480</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TuesdayTemp">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>400</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="TuesdayMin">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>440</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="WednesdayMax">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>480</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="WednesdayMin">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>440</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="WednesdayTemp">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>400</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ThursdayMax">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>480</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ThursdayMin">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>440</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ThursdayTemp">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>400</y>
+      <width>31</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>

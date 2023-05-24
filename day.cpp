@@ -28,14 +28,14 @@ Day::~Day()
 
 void Day::slot()
 {
-    // в скобочки нужно будет передавать реальные параметры
-    ui->City->setText("city_param");
-    ui->Date->setText("date_param");
-    ui->Temp->setText("temp_param");
-    ui->Pressure->setText("press_param");
-    ui->MaxTemp->setText("maxT_param");
-    ui->MinTemp->setText("minT_param");
-    ui->WindSpeed->setText("wspeed_param");
+    // В скобочки нужно будет передавать реальные параметры - API
+    //ui->City->setText("city_param");
+    //ui->Date->setText("date_param");
+    //ui->Temp->setText("temp_param");
+    //ui->Pressure->setText("press_param");
+    //ui->MaxTemp->setText("maxT_param");
+    //ui->MinTemp->setText("minT_param");
+    //ui->WindSpeed->setText("wspeed_param");
 }
 
 
