@@ -2,13 +2,16 @@
 #include "./ui_mainwindow.h"
 #include <QPixmap>
 #include <QDebug>
+#include "weatherAPI.h"
+#include "timeforuse.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    QString city = "Moscow";
     // Earth Img
     QPixmap pix(":/resources/img/cute_earth.png");
     int w = ui->Earth->width();
@@ -23,6 +26,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(this, &MainWindow::signal, day, &Day::slot);
     connect(day, &Day::mainwindow, this, &MainWindow::show);
+    ui->label_29->setText(QString("    ")+QString::number(get_temp(get_weather_json(city)))+QString("°"));
+    ui->label_31->setText(QString(" ")+QString::number(get_wind_speed(get_weather_json(city)))+QString(" м/с"));
+    ui->label_32->setText(get_dotw()+QString(", ")+get_day()+QString(" ")+get_month());
+
 
 }
 
