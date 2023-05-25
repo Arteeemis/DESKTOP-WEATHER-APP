@@ -1,12 +1,16 @@
 <RCC>
     <qresource prefix="/resources">
-        <file>img/bkg.jpg</file>
         <file>img/gob.png</file>
         <file>img/weatherIcon.png</file>
-        <file>img/bkgd.jpg</file>
         <file>img/earth.png</file>
-        <file>img/globe.png</file>
         <file>img/cute_earth.png</file>
         <file>img/output-onlinepngtools.png</file>
+        <file>img/windicon3.png</file>
+        <file>img/windicon4 (2).png</file>
+        <file>img/windicon5 (2).png</file>
+        <file>img/windicon2 (2).png</file>
+        <file>img/SB1.png</file>
+        <file>img/SB2.png</file>
+        <file>img/windiconday.png</file>
     </qresource>
 </RCC>

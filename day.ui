@@ -47,7 +47,7 @@
     <rect>
      <x>50</x>
      <y>60</y>
-     <width>331</width>
+     <width>311</width>
      <height>315</height>
     </rect>
    </property>
@@ -59,8 +59,8 @@
     </font>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0">
-     <widget class="QLabel" name="Temp">
+    <item row="0" column="0">
+     <widget class="QLabel" name="City">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -69,12 +69,12 @@
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Температура:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Ваш город:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="2">
-     <widget class="QLabel" name="label">
+    <item row="5" column="1">
+     <widget class="QLabel" name="label_6">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -87,8 +87,8 @@
       </property>
      </widget>
     </item>
-    <item row="6" column="2">
-     <widget class="QLabel" name="label_7">
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_2">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -101,8 +101,8 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="2">
-     <widget class="QLabel" name="label_5">
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_3">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -129,22 +129,8 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="City">
-      <property name="font">
-       <font>
-        <family>Segoe UI Semibold</family>
-        <pointsize>13</pointsize>
-        <italic>false</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Ваш город:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QLabel" name="label_3">
+    <item row="6" column="1">
+     <widget class="QLabel" name="label_7">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -157,22 +143,8 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="Date">
-      <property name="font">
-       <font>
-        <family>Segoe UI Semibold</family>
-        <pointsize>13</pointsize>
-        <italic>false</italic>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Дата:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QLabel" name="label_6">
+    <item row="0" column="1">
+     <widget class="QLabel" name="label">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -185,8 +157,8 @@
       </property>
      </widget>
     </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="MaxTemp">
+    <item row="5" column="0">
+     <widget class="QLabel" name="MinTemp">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -195,12 +167,26 @@
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Закат:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Рассвет:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="2">
+    <item row="3" column="1">
      <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>13</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="label_5">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -227,8 +213,8 @@
       </property>
      </widget>
     </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="MinTemp">
+    <item row="2" column="0">
+     <widget class="QLabel" name="Date">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
@@ -237,28 +223,42 @@
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Рассвет:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Дата:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="2">
-     <widget class="QLabel" name="label_2">
+    <item row="6" column="0">
+     <widget class="QLabel" name="MaxTemp">
       <property name="font">
        <font>
         <family>Segoe UI Semibold</family>
         <pointsize>13</pointsize>
-        <italic>true</italic>
+        <italic>false</italic>
        </font>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;TextLabel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Закат:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QLabel" name="label_8">
+    <item row="1" column="0">
+     <widget class="QLabel" name="Temp">
+      <property name="font">
+       <font>
+        <family>Segoe UI Semibold</family>
+        <pointsize>13</pointsize>
+        <italic>false</italic>
+       </font>
+      </property>
       <property name="text">
-       <string>    </string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Температура:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="WindIconDay">
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </item>
