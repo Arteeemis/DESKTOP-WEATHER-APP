@@ -1,11 +1,6 @@
 #include "mainwindow.h"
-#include "weatherAPI.h"
 #include <QCoreApplication>
-//
-#include <chrono>
-#include <ctime>
 #include <QApplication>
-
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -20,12 +15,7 @@ int main(int argc, char *argv[])
     //double pressure = get_pressure(obj);
     //double ws = get_wind_speed(obj);
     //auto start = std::chrono::system_clock::now();
-    //auto end = std::chrono::system_clock::now();
-
-    //std::chrono::duration<double> elapsed_seconds = end-start;
-    //std::time_t end_time = std::chrono::system_clock::to_time_t(end);
     //// Print the weather information
-    //qDebug() << QString("Today is %1").arg(std::ctime(&end_time));
     //qDebug() << QString("Погода в городе %1: %2, %3°C").arg(city, description, QString::number(temperature));
     //qDebug() << QString("min temp ") << QString::number(min_temp);
     //qDebug() << QString("max temp ") << QString::number(max_temp);
@@ -34,7 +24,6 @@ int main(int argc, char *argv[])
     //qDebug() << QString("pressure ") << pressure ;
     //qDebug() << QString("wind speed ") << ws << QString("м/с");
     //qDebug() << obj;
-
     MainWindow w;
     w.show();
     return a.exec();

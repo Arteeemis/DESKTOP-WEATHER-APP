@@ -23,6 +23,8 @@ set(PROJECT_SOURCES
         day.ui
         weatherAPI.h
         weatherAPI.cpp
+        TimeForUse.h
+        TimeForUse.cpp
 
 )
 
