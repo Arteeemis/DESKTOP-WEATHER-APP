@@ -29,6 +29,35 @@ QJsonObject get_weather_json(QString city){
     return obj;
 }
 
+QJsonObject get_weather_json_(QString city){
+    QString baseUrl = "https://api.openweathermap.org/data/2.5/forecast";
+    QString apiKey = "bfa8d426b626bbfadae0dfb17496323c";
+    QUrlQuery query;
+    query.addQueryItem("q", city);
+    query.addQueryItem("appid", apiKey);
+    query.addQueryItem("lang", "ru");
+    query.addQueryItem("units", "metric");
+
+    // Build the request URL
+    QUrl url(baseUrl);
+    url.setQuery(query);
+
+    // Create a network access manager to make the HTTP request
+    QNetworkAccessManager manager;
+    QNetworkReply *reply = manager.get(QNetworkRequest(url));
+
+    // Create an event loop to block until the request is finished
+    QEventLoop loop;
+    QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
+    loop.exec();
+
+    // Parse the JSON response
+    QByteArray data = reply->readAll();
+    QJsonDocument doc = QJsonDocument::fromJson(data);
+    QJsonObject obj = doc.object();
+    return obj;
+}
+
 double get_temp(QJsonObject obj){
     QJsonObject weather = obj["weather"].toArray()[0].toObject();
     double temperature = obj["main"].toObject()["temp"].toDouble();
@@ -77,4 +106,4 @@ double get_wind_speed(QJsonObject obj){
     return speed;
 }
 
-//   sunrise sunset visibility wind speed
+

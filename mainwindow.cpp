@@ -26,10 +26,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(this, &MainWindow::signal, day, &Day::slot);
     connect(day, &Day::mainwindow, this, &MainWindow::show);
-    ui->label_29->setText(QString("    ")+QString::number(get_temp(get_weather_json(city)))+QString("°"));
-    ui->label_31->setText(QString(" ")+QString::number(get_wind_speed(get_weather_json(city)))+QString(" м/с"));
-    ui->label_32->setText(get_dotw()+QString(", ")+get_day()+QString(" ")+get_month());
-
+    ui->label_29->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" + QString("")+QString::number(get_temp(get_weather_json(city)))+QString("°")+ "</span></p></body></html>");
+    ui->label_31->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString(" ")+QString::number(get_wind_speed(get_weather_json(city)))+QString(" м/с")+ "</span></p></body></html>");
+    ui->label_32->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_dotw(0)+QString(", ")+get_day(0)+QString(" ")+get_month()+ "</span></p></body></html>");
+    ui->label->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(1)+QString(" ")+get_day(1) + "</span></p></body></html>");
+    ui->label_2->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(2)+QString(" ")+get_day(2) + "</span></p></body></html>");
+    ui->label_3->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(3)+QString(" ")+get_day(3)+ "</span></p></body></html>");
+    ui->label_4->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(4)+QString(" ")+get_day(4) + "</span></p></body></html>");
 
 }
 

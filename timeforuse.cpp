@@ -1,8 +1,7 @@
 #include "timeforuse.h"
 
-QString get_dotw(){
-    time_t now = time(0);
-
+QString get_dotw(int shift){
+    time_t now = time(0)+(shift*86400);
     // convert now to string form
     std::string dt = ctime(&now);
     std::string cur = "";
@@ -25,7 +24,7 @@ QString get_dotw(){
     } else if (dotw == "Thu"){
         return QString("Четверг");
     } else if (dotw == "Fri"){
-        return QString("Птяница");
+        return QString("Пятница");
     } else if (dotw == "Sat"){
         return QString("Суббота");
     } else if (dotw == "Sun"){
@@ -76,8 +75,8 @@ QString get_month() {
     }
 }
 
-QString get_day(){
-    time_t now = time(0);
+QString get_day(int shift){
+    time_t now = time(0)+(shift*86400);
 
     // convert now to string form
     std::string dt = ctime(&now);
