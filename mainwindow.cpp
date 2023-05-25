@@ -34,11 +34,37 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_3->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(3)+QString(" ")+get_day(3)+ "</span></p></body></html>");
     ui->label_4->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(4)+QString(" ")+get_day(4) + "</span></p></body></html>");
 
+    // wind icon
+    double degree = GetWindDirection(100);
+    QPixmap WindPix(":/resources/img/windicon5 (2).png");
+    WindPix = WindPix.transformed(QTransform()
+                                      .translate(ui->WindIcon->x(), ui->WindIcon->y())
+                                      .rotate(degree)
+                                      .translate(-ui->WindIcon->x(), -ui->WindIcon->y()));
+    w = ui->WindIcon->width();
+    h = ui->WindIcon->height();
+
+    ui->WindIcon->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+double MainWindow::GetWindDirection(double degree)
+{
+    double d = 0.0;
+    if((degree >= 0 && degree < 45) || (degree > 315 && degree <= 360))
+        d = 0;
+    else if(degree >= 45 && degree < 135)
+        d = 90;
+    else if(degree >= 135 && degree < 225)
+        d = 180;
+    else if(degree >= 225 && degree <= 315)
+        d = 270;
+
+    return d;
 }
 
 void MainWindow::on_monday_clicked()
@@ -84,3 +110,9 @@ void MainWindow::on_thursday_clicked()
     //закрываем основное окно
     this->close();
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString City = ui->SearchLine->text();
+}
+

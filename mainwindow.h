@@ -15,6 +15,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    double GetWindDirection(double);
 
 private:
     Ui::MainWindow *ui;
@@ -31,6 +32,7 @@ private slots:
     void on_wednesday_clicked();
 
     void on_thursday_clicked();
+    void on_pushButton_clicked();
 };
 
 #endif // MAINWINDOW_H

@@ -14,6 +14,7 @@ class Day : public QWidget
 public:
     explicit Day(QWidget *parent = nullptr);
     ~Day();
+    double GetWindDirection(double);
 
 private:
     Ui::Day *ui;

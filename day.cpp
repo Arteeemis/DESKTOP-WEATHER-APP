@@ -13,17 +13,39 @@ Day::Day(QWidget *parent) :
     QPalette palette;
     palette.setBrush(QPalette::Window, bkgnd);
     this->setPalette(palette);
-    //
-    //this->setStyleSheet("QFrame#{border-style: solid;"
-    //                    "border-width: 3px;"
-    //                    "border-radius: 4px;"
-    //                    "background-color: rgb(247, 147, 30);"
-    //                    "border-color:  rgb(255, 252, 245);}");
+
+    // wind icon
+    double degree = GetWindDirection(100);
+    QPixmap WindPix(":/resources/img/windiconday.png");
+    WindPix = WindPix.transformed(QTransform()
+                                      .translate(ui->WindIconDay->x(), ui->WindIconDay->y())
+                                      .rotate(degree)
+                                      .translate(-ui->WindIconDay->x(), -ui->WindIconDay->y()));
+    int w = ui->WindIconDay->width();
+    int h = ui->WindIconDay->height();
+
+    ui->WindIconDay->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+
 }
 
 Day::~Day()
 {
     delete ui;
+}
+
+double Day::GetWindDirection(double degree)
+{
+    double d = 0.0;
+    if((degree >= 0 && degree < 45) || (degree > 315 && degree <= 360))
+        d = 0;
+    else if(degree >= 45 && degree < 135)
+        d = 90;
+    else if(degree >= 135 && degree < 225)
+        d = 180;
+    else if(degree >= 225 && degree <= 315)
+        d = 270;
+
+    return d;
 }
 
 void Day::slot()
