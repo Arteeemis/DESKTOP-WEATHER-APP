@@ -8,9 +8,9 @@
 #include <string>
 #include <vector>
 
-QString get_dotw();
+QString get_dotw(int shift);
 QString get_month();
-QString get_day();
+QString get_day(int shift);
 
 
 #endif // TIMEFORUSE_H
