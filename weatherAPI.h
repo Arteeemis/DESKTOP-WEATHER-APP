@@ -17,4 +17,9 @@ double get_feels_like(QJsonObject obj);
 int get_humidity(QJsonObject obj);
 double get_pressure(QJsonObject obj);
 double get_wind_speed(QJsonObject obj);
+QJsonObject get_weather_json_hd(QString city);
+double get_temp_hd(QJsonObject obj, int day);
+double get_temp_min_hd(QJsonObject obj, int day);
+double get_temp_max_hd(QJsonObject obj, int day);
+QString get_weather_description_hd(QJsonObject obj, int day);
 #endif // WEATHERAPI_H

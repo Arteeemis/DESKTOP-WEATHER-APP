@@ -33,7 +33,22 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_2->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(2)+QString(" ")+get_day(2) + "</span></p></body></html>");
     ui->label_3->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(3)+QString(" ")+get_day(3)+ "</span></p></body></html>");
     ui->label_4->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(4)+QString(" ")+get_day(4) + "</span></p></body></html>");
-
+    ui->MondayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),0)));
+    ui->TuesdayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),1)));
+    ui->WednesdayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),2)));
+    ui->ThursdayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),3)));
+    ui->MondayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),0)));
+    ui->TuesdayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),1)));
+    ui->WednesdayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),2)));
+    ui->ThursdayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),3)));
+    ui->MondayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),0)));
+    ui->TuesdayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),1)));
+    ui->WednesdayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),2)));
+    ui->ThursdayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),3)));
+    ui->MondayWeather->setText( QString("")+QString(get_weather_description_hd(get_weather_json_hd(city),0)));
+    ui->TuesdayWeather->setText( QString("")+QString(get_weather_description_hd(get_weather_json_hd(city),1)));
+    ui->WednesdayWeather->setText( QString("")+(get_weather_description_hd(get_weather_json_hd(city),2)));
+    ui->ThursdayWeather->setText( QString("")+(get_weather_description_hd(get_weather_json_hd(city),3)));
     // wind icon
     double degree = GetWindDirection(100);
     QPixmap WindPix(":/resources/img/windicon5 (2).png");
