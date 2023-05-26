@@ -26,4 +26,9 @@ double get_temp_hourly(QJsonObject obj, int hour_interval);
 QString get_hours(QJsonObject obj, int hour_interval);
 double get_wind_direct(QJsonObject obj);
 bool city_found(QJsonObject obj);
+double get_pressure_d(QJsonObject obj, int day);
+double get_humidity_d(QJsonObject obj, int day);
+double get_feels_like_d(QJsonObject obj, int day);
+double get_wind_speed_d(QJsonObject obj, int day);
+double get_wind_direct_d(QJsonObject obj, int day);
 #endif // WEATHERAPI_H

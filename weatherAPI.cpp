@@ -227,3 +227,80 @@ QString get_hours(QJsonObject obj, int hour_interval){ // 0 - first, 1 - second 
     }
     return ans;
 }
+
+double get_pressure_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+    int temp = 0;
+    QJsonArray weather = obj["list"].toArray();
+    for (int i = 0; i < weather.size(); i++){// 8 9 11 12
+        if (get_day(1) == (QString(weather[i].toObject()["dt_txt"].toString()[8])+QString(weather[i].toObject()["dt_txt"].toString()[9]))) {
+            if (QString(weather[i].toObject()["dt_txt"].toString()[11]) == '1' && QString(weather[i].toObject()["dt_txt"].toString()[12]) =='5'){
+                temp = i+8*day;
+                break;
+            }
+        }
+    }
+    double pressure = weather[temp].toObject()["main"].toObject()["pressure"].toDouble();
+    return pressure/1.333;
+}
+
+double get_humidity_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+    int temp = 0;
+    QJsonArray weather = obj["list"].toArray();
+    for (int i = 0; i < weather.size(); i++){// 8 9 11 12
+        if (get_day(1) == (QString(weather[i].toObject()["dt_txt"].toString()[8])+QString(weather[i].toObject()["dt_txt"].toString()[9]))) {
+            if (QString(weather[i].toObject()["dt_txt"].toString()[11]) == '1' && QString(weather[i].toObject()["dt_txt"].toString()[12]) =='5'){
+                temp = i+8*day;
+                break;
+            }
+        }
+    }
+    double humidity = weather[temp].toObject()["main"].toObject()["humidity"].toDouble();
+    return humidity;
+}
+
+double get_feels_like_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+    int temp = 0;
+    QJsonArray weather = obj["list"].toArray();
+    for (int i = 0; i < weather.size(); i++){// 8 9 11 12
+        if (get_day(1) == (QString(weather[i].toObject()["dt_txt"].toString()[8])+QString(weather[i].toObject()["dt_txt"].toString()[9]))) {
+            if (QString(weather[i].toObject()["dt_txt"].toString()[11]) == '1' && QString(weather[i].toObject()["dt_txt"].toString()[12]) =='5'){
+                temp = i+8*day;
+                break;
+            }
+        }
+    }
+    double feels_like = weather[temp].toObject()["main"].toObject()["feels_like"].toDouble();
+    return feels_like;
+}
+
+double get_wind_speed_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+    int temp = 0;
+    QJsonArray weather = obj["list"].toArray();
+    for (int i = 0; i < weather.size(); i++){// 8 9 11 12
+        if (get_day(1) == (QString(weather[i].toObject()["dt_txt"].toString()[8])+QString(weather[i].toObject()["dt_txt"].toString()[9]))) {
+            if (QString(weather[i].toObject()["dt_txt"].toString()[11]) == '1' && QString(weather[i].toObject()["dt_txt"].toString()[12]) =='5'){
+                temp = i+8*day;
+                break;
+            }
+        }
+    }
+    QJsonObject wind = weather[temp].toObject()["wind"].toArray()[0].toObject();
+    double ans = wind["speed"].toDouble();
+    return ans;
+}
+
+double get_wind_direct_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+    int temp = 0;
+    QJsonArray weather = obj["list"].toArray();
+    for (int i = 0; i < weather.size(); i++){// 8 9 11 12
+        if (get_day(1) == (QString(weather[i].toObject()["dt_txt"].toString()[8])+QString(weather[i].toObject()["dt_txt"].toString()[9]))) {
+            if (QString(weather[i].toObject()["dt_txt"].toString()[11]) == '1' && QString(weather[i].toObject()["dt_txt"].toString()[12]) =='5'){
+                temp = i+8*day;
+                break;
+            }
+        }
+    }
+    QJsonObject wind = weather[temp].toObject()["wind"].toArray()[0].toObject();
+    double ans = wind["deg"].toDouble();
+    return ans;
+}

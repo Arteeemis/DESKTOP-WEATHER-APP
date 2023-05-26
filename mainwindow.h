@@ -16,14 +16,17 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     double GetWindDirection(double);
-    void set_wether(QString city, QJsonObject obj,QJsonObject obj_hd);
+    void set_weather(QString city, QJsonObject obj,QJsonObject obj_hd);
+    QJsonObject obj;
+    QJsonObject obj_hd;
+    QString city;
 
 private:
     Ui::MainWindow *ui;
     Day *day;
 
 signals:
-    void signal(int DayNumber);
+    void signal(int DayNumber, QJsonObject obj_hd, QString city);
 
 private slots:
     void on_monday_clicked();

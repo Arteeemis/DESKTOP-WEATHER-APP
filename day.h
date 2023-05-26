@@ -23,7 +23,7 @@ private:
     Ui::Day *ui;
     QPoint MyPos;
 public slots:
-    void slot(int DayNumber);
+    void slot(int DayNumber, QJsonObject obj_hd, QString city);
 
 private slots:
     void on_GoBack_clicked();

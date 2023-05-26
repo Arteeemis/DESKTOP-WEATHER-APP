@@ -4,11 +4,8 @@
 #include <QDebug>
 #include "weatherAPI.h"
 #include "timeforuse.h"
-#include <QGuiApplication>
-#include <QScreen>
-#include <QMessageBox>
 
-void MainWindow::set_wether(QString city, QJsonObject obj,QJsonObject obj_hd ){
+void MainWindow::set_weather(QString city, QJsonObject obj,QJsonObject obj_hd ){
     if (city_found(get_weather_json(city))){
     ui->TempNow->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" + QString("")+QString::number(get_temp(obj))+QString("°")+ "</span></p></body></html>");
     ui->WindNow->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString(" ")+QString::number(get_wind_speed(obj))+QString(" м/с")+ "</span></p></body></html>");
@@ -41,11 +38,11 @@ void MainWindow::set_wether(QString city, QJsonObject obj,QJsonObject obj_hd ){
     int h = ui->WindIcon->height();
 
     ui->WindIcon->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
-    }
-    else
+    } else
     {
-        QMessageBox::critical(this, "Error" ,"Такого города нет, введите другой");
+    QMessageBox::critical(this, "Error" ,"Такого города нет, введите другой");
     }
+
 }
 
 MainWindow::MainWindow(QWidget *parent)
@@ -53,8 +50,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    // Initial City
-    QString city = "Москва";
+    city = "Москва";
     // Earth Img
     QPixmap pix(":/resources/img/cute_earth.png");
     int w = ui->Earth->width();
@@ -62,22 +58,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Earth->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     //
     this->setWindowTitle("WeatherApp");
-    // Fixed Screen Size
-    QScreen *screen = QGuiApplication::primaryScreen();
-    QRect  screenGeometry = screen->geometry();
-    int height = screenGeometry.height();
-    int width = screenGeometry.width();
-    int wHeight = this->geometry().height();
-    int wWidth = this->geometry().width();
-    this->setGeometry((width - wWidth) / 2, (height - wHeight) / 2, this->geometry().width(), this->geometry().height());
-    this->setFixedSize(wWidth, wHeight);
-
+    // прозрачность кнопки
+    ui->DayOne->setStyleSheet("background: transparent;");
+    //
     day = new Day;
 
     connect(this, &MainWindow::signal, day, &Day::slot);
     connect(day, &Day::mainwindow, this, &MainWindow::show);
-    QJsonObject obj = get_weather_json(city);
-    QJsonObject obj_hd = get_weather_json_hd(city);
+    obj = get_weather_json(city);
+    obj_hd = get_weather_json_hd(city);
     ui->Date->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_dotw(0)+QString(", ")+get_day(0)+QString(" ")+get_month()+ "</span></p></body></html>");
     ui->DayOne->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(1)+QString(" ")+get_day(1) + "</span></p></body></html>");
     ui->DayTwo->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(2)+QString(" ")+get_day(2) + "</span></p></body></html>");
@@ -87,7 +76,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->HourTwo->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_hours(obj_hd,1)+QString(" ")+ "</span></p></body></html>");
     ui->HourThree->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_hours(obj_hd,2)+ "</span></p></body></html>");
     ui->SearchLine->setText(city);
-    set_wether(city,obj,obj_hd);
+    set_weather(city,obj,obj_hd);
     // wind icon
     double degree = GetWindDirection(get_wind_direct(obj));
     QPixmap WindPix(":/resources/img/windicon5 (2).png");
@@ -123,40 +112,44 @@ double MainWindow::GetWindDirection(double degree)
 
 void MainWindow::on_monday_clicked()
 {
+    //day->setStyleSheet("background-color: rgb(247, 147, 30);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal(1);
+    emit signal(1,obj_hd,city);
     //закрываем основное окно
     this->close();
 }
 
 void MainWindow::on_tuesday_clicked()
 {
+    //day->setStyleSheet("background-color: rgb(127, 205, 238);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal(2);
+    emit signal(2,obj_hd,city);
     //закрываем основное окно
     this->close();
 }
 
 void MainWindow::on_wednesday_clicked()
 {
+    //day->setStyleSheet("background-color: rgb(7, 64, 123);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal(3);
+    emit signal(3,obj_hd,city);
     //закрываем основное окно
     this->close();
 }
 
 void MainWindow::on_thursday_clicked()
 {
+    //day->setStyleSheet("background-color: rgb(14, 15, 59);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal(4);
+    emit signal(4,obj_hd,city);
     //закрываем основное окно
     this->close();
 }
@@ -166,7 +159,7 @@ void MainWindow::on_pushButton_clicked()
     QString city = ui->SearchLine->text();
     QJsonObject obj = get_weather_json(city);
     QJsonObject obj_hd = get_weather_json_hd(city);
-    set_wether(city,obj,obj_hd);
+    set_weather(city,obj,obj_hd);
 
 }
 
