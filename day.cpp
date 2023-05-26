@@ -1,20 +1,19 @@
 #include "day.h"
 #include "ui_day.h"
-#include <QPixmap>
+#include "weatherAPI.h"
 
 Day::Day(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Day)
 {
     ui->setupUi(this);
-    //
-    QPixmap bkgnd(":/resources/img/bkgd.jpg");
-    bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-    QPalette palette;
-    palette.setBrush(QPalette::Window, bkgnd);
-    this->setPalette(palette);
+
+    this->setWindowFlags(Qt::FramelessWindowHint);
+    this->setAttribute(Qt::WA_TranslucentBackground);
 
     // wind icon
+    //QJsonObject obj = get_weather_json();
+    // ПОМЕНЯТЬ ПАРАМЕТР ФУНКЦИИ GetWindDirection
     double degree = GetWindDirection(100);
     QPixmap WindPix(":/resources/img/windiconday.png");
     WindPix = WindPix.transformed(QTransform()
@@ -25,7 +24,6 @@ Day::Day(QWidget *parent) :
     int h = ui->WindIconDay->height();
 
     ui->WindIconDay->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
-
 }
 
 Day::~Day()
@@ -48,8 +46,41 @@ double Day::GetWindDirection(double degree)
     return d;
 }
 
-void Day::slot()
+void Day::slot(int DayNumber)
 {
+    switch(DayNumber)
+    {
+    case 1:
+        ui->groupBox->setStyleSheet("QGroupBox{background-color: rgb(247, 147, 30);"
+                                    "border-style: solid;"
+                                    "border-radius: 29px;"
+                                    "border-width: 12px;"
+                                    "border-color: rgb(255, 252, 245);}");
+        break;
+    case 2:
+        ui->groupBox->setStyleSheet("QGroupBox{background-color: rgb(127, 205, 238);"
+                                    "border-style: solid;"
+                                    "border-radius: 29px;"
+                                    "border-width: 12px;"
+                                    "border-color: rgb(255, 252, 245);}");
+        break;
+    case 3:
+        ui->groupBox->setStyleSheet("QGroupBox{background-color: rgb(7, 64, 123);"
+                                    "border-style: solid;"
+                                    "border-radius: 29px;"
+                                    "border-width: 12px;"
+                                    "border-color: rgb(255, 252, 245);}");
+        break;
+    case 4:
+        ui->groupBox->setStyleSheet("QGroupBox{background-color: rgb(14, 15, 59);"
+                                    "border-style: solid;"
+                                    "border-radius: 29px;"
+                                    "border-width: 12px;"
+                                    "border-color: rgb(255, 252, 245);}");
+        break;
+
+    }
+
     // В скобочки нужно будет передавать реальные параметры - API
     //ui->City->setText("city_param");
     //ui->Date->setText("date_param");
@@ -58,12 +89,41 @@ void Day::slot()
     //ui->MaxTemp->setText("maxT_param");
     //ui->MinTemp->setText("minT_param");
     //ui->WindSpeed->setText("wspeed_param");
-}
 
+}
 
 void Day::on_GoBack_clicked()
 {
     this->close();
     emit mainwindow();
+}
+
+void Day::on_ExitButton_clicked()
+{
+    QMessageBox::StandardButton reply = QMessageBox::question(this, "Выход", "Вы действительно хотите закрыть приложение?",
+                                                              QMessageBox::Yes | QMessageBox::No);
+    if(reply == QMessageBox::Yes){
+        this->close();
+    }
+}
+
+void Day::mouseMoveEvent(QMouseEvent *e)
+{
+    if(MyPos.x() >= 0 && e->buttons() && Qt::LeftButton)
+    {
+        QPoint dif = e->pos() - MyPos;
+        QPoint npos = this->pos() + dif;
+        this->move(npos);
+    }
+}
+
+void Day::mousePressEvent(QMouseEvent *e)
+{
+    MyPos = e->pos();
+}
+
+void Day::mouseReleaseEvent(QMouseEvent *e)
+{
+    MyPos = QPoint(-1,1);
 }
 

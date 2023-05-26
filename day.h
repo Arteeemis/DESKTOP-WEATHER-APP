@@ -2,6 +2,9 @@
 #define DAY_H
 
 #include <QWidget>
+#include <QtGui>
+#include <QPixmap>
+#include <QMessageBox>
 
 namespace Ui {
 class Day;
@@ -18,12 +21,20 @@ public:
 
 private:
     Ui::Day *ui;
-
+    QPoint MyPos;
 public slots:
-    void slot();
+    void slot(int DayNumber);
 
 private slots:
     void on_GoBack_clicked();
+
+    void on_ExitButton_clicked();
+
+    void mouseMoveEvent(QMouseEvent *);
+
+    void mousePressEvent(QMouseEvent *);
+
+    void mouseReleaseEvent(QMouseEvent *);
 
 signals:
     void mainwindow();
