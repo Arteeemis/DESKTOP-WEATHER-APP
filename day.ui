@@ -120,7 +120,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="PressureData">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -134,7 +134,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="CityData">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -148,7 +148,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="HumidityData">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -162,7 +162,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="6" column="1">
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="FeelsLikeData">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -225,7 +225,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="TempData">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -239,7 +239,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="WindData">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -267,7 +267,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="DateData">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -281,7 +281,7 @@ border-color: rgb(255, 252, 245);
       </widget>
      </item>
      <item row="5" column="0">
-      <widget class="QLabel" name="MinTemp">
+      <widget class="QLabel" name="Humidity">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -290,12 +290,12 @@ border-color: rgb(255, 252, 245);
         </font>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Рассвет:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Влажность:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
      <item row="6" column="0">
-      <widget class="QLabel" name="MaxTemp">
+      <widget class="QLabel" name="FeelsLike">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -304,7 +304,7 @@ border-color: rgb(255, 252, 245);
         </font>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Закат:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Ощущается как:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>

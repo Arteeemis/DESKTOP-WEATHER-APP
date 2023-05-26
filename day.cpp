@@ -1,6 +1,7 @@
 #include "day.h"
 #include "ui_day.h"
 #include "weatherAPI.h"
+#include "timeforuse.h"
 
 Day::Day(QWidget *parent) :
     QWidget(parent),
@@ -46,7 +47,7 @@ double Day::GetWindDirection(double degree)
     return d;
 }
 
-void Day::slot(int DayNumber)
+void Day::slot(int DayNumber, QJsonObject obj_hd, QString city)
 {
     switch(DayNumber)
     {
@@ -82,13 +83,13 @@ void Day::slot(int DayNumber)
     }
 
     // В скобочки нужно будет передавать реальные параметры - API
-    //ui->City->setText("city_param");
-    //ui->Date->setText("date_param");
-    //ui->Temp->setText("temp_param");
-    //ui->Pressure->setText("press_param");
-    //ui->MaxTemp->setText("maxT_param");
-    //ui->MinTemp->setText("minT_param");
-    //ui->WindSpeed->setText("wspeed_param");
+    ui->CityData->setText(city);
+    ui->DateData->setText(QString(get_day(DayNumber)));
+    ui->TempData->setText(QString::number(get_temp_d(obj_hd,DayNumber-1)));
+    ui->PressureData->setText(QString::number(get_pressure_d(obj_hd,DayNumber-1)));
+    ui->HumidityData->setText(QString::number(get_humidity_d(obj_hd,DayNumber-1))+QString(" %"));
+    ui->FeelsLikeData->setText(QString::number(get_feels_like_d(obj_hd,DayNumber-1)));
+//    ui->WindSpeed->setText(QString::number(get_wind_speed_d(obj_hd,DayNumber-1)));
 
 }
 
