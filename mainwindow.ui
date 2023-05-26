@@ -189,7 +189,7 @@ border-radius: 15px;</string>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="1" column="0">
-      <widget class="QLabel" name="label_22">
+      <widget class="QLabel" name="HourOne">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -208,7 +208,7 @@ border-radius: 15px;</string>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLabel" name="label_24">
+      <widget class="QLabel" name="HourTwo">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -227,7 +227,7 @@ border-radius: 15px;</string>
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QLabel" name="label_23">
+      <widget class="QLabel" name="HourThree">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -246,7 +246,7 @@ border-radius: 15px;</string>
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="label_25">
+      <widget class="QLabel" name="HourOneTemp">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -265,7 +265,7 @@ border-radius: 15px;</string>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLabel" name="label_26">
+      <widget class="QLabel" name="HourTwoTemp">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -284,7 +284,7 @@ border-radius: 15px;</string>
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QLabel" name="label_27">
+      <widget class="QLabel" name="HourThreeTemp">
        <property name="font">
         <font>
          <family>Segoe UI Semibold</family>
@@ -356,7 +356,7 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_31">
+   <widget class="QLabel" name="WindNow">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -403,7 +403,7 @@ border-radius: 15px;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_32">
+   <widget class="QLabel" name="Date">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -426,7 +426,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;День, число&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_29">
+   <widget class="QLabel" name="TempNow">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -449,7 +449,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0e0f3b;&quot;&gt;15*С&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="DayOne">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -504,7 +504,7 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="MondayWeather">
+   <widget class="QLabel" name="DayOneWeather">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -516,7 +516,7 @@ border-radius: 15px;</string>
     <property name="font">
      <font>
       <family>Segoe UI Semibold</family>
-      <pointsize>11</pointsize>
+      <pointsize>13</pointsize>
       <italic>true</italic>
      </font>
     </property>
@@ -584,7 +584,7 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="DayTwo">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -611,7 +611,7 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="DayThree">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -637,7 +637,7 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="DayFour">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -741,7 +741,7 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="TuesdayWeather">
+   <widget class="QLabel" name="DayTwoWeather">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -753,7 +753,7 @@ border-radius: 15px;</string>
     <property name="font">
      <font>
       <family>Segoe UI Semibold</family>
-      <pointsize>11</pointsize>
+      <pointsize>13</pointsize>
       <italic>true</italic>
      </font>
     </property>
@@ -770,7 +770,7 @@ border-radius: 15px;</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="WednesdayWeather">
+   <widget class="QLabel" name="DayThreeWeather">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -782,7 +782,7 @@ border-radius: 15px;</string>
     <property name="font">
      <font>
       <family>Segoe UI Semibold</family>
-      <pointsize>11</pointsize>
+      <pointsize>13</pointsize>
       <italic>true</italic>
      </font>
     </property>
@@ -799,7 +799,7 @@ border-radius: 15px;</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="ThursdayWeather">
+   <widget class="QLabel" name="DayFourWeather">
     <property name="geometry">
      <rect>
       <x>610</x>
@@ -811,7 +811,7 @@ border-radius: 15px;</string>
     <property name="font">
      <font>
       <family>Segoe UI Semibold</family>
-      <pointsize>11</pointsize>
+      <pointsize>13</pointsize>
       <italic>true</italic>
      </font>
     </property>
@@ -981,7 +981,7 @@ border-radius: 15px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="MondayTemp">
+   <widget class="QLabel" name="DayOneTemp">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -1003,7 +1003,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="MondayMin">
+   <widget class="QLabel" name="DayOneMin">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -1025,7 +1025,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="MondayMax">
+   <widget class="QLabel" name="DayOneMax">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -1047,7 +1047,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="TuesdayMax">
+   <widget class="QLabel" name="DayTwoMax">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -1069,7 +1069,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="TuesdayTemp">
+   <widget class="QLabel" name="DayTwoTemp">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -1091,7 +1091,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="TuesdayMin">
+   <widget class="QLabel" name="DayTwoMin">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -1113,7 +1113,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="WednesdayMax">
+   <widget class="QLabel" name="DayThreeMax">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -1135,7 +1135,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="WednesdayMin">
+   <widget class="QLabel" name="DayThreeMin">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -1157,7 +1157,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="WednesdayTemp">
+   <widget class="QLabel" name="DayThreeTemp">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -1179,7 +1179,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="ThursdayMax">
+   <widget class="QLabel" name="DayFourMax">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -1201,7 +1201,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="ThursdayMin">
+   <widget class="QLabel" name="DayFourMin">
     <property name="geometry">
      <rect>
       <x>720</x>
@@ -1223,7 +1223,7 @@ border-radius: 15px;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="ThursdayTemp">
+   <widget class="QLabel" name="DayFourTemp">
     <property name="geometry">
      <rect>
       <x>720</x>
