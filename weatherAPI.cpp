@@ -107,6 +107,11 @@ double get_wind_speed(QJsonObject obj){
     return speed;
 }
 
+double get_wind_direct(QJsonObject obj){
+    QJsonObject weather = obj["weather"].toArray()[0].toObject();
+    double direction = obj["wind"].toObject()["deg"].toDouble();
+    return direction;
+}
 // functions to get the hourly/daily(hd) info about the weather
 
 QJsonObject get_weather_json_hd(QString city){
@@ -138,7 +143,7 @@ QJsonObject get_weather_json_hd(QString city){
     return obj;
 }
 
-double get_temp_hd(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+double get_temp_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
     int temp = 0;
     QJsonArray weather = obj["list"].toArray();
     for (int i = 0; i < weather.size(); i++){// 8 9 11 12
@@ -153,7 +158,7 @@ double get_temp_hd(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
     return temperature;
 }
 
-double get_temp_min_hd(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+double get_temp_min_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
     int temp = 0;
     QJsonArray weather = obj["list"].toArray();
     for (int i = 0; i < weather.size(); i++){// 8 9 11 12
@@ -168,7 +173,7 @@ double get_temp_min_hd(QJsonObject obj, int day){ // receives day(0 - tomorrow .
     return temperature;
 }
 
-double get_temp_max_hd(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+double get_temp_max_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
     int temp = 0;
     QJsonArray weather = obj["list"].toArray();
     for (int i = 0; i < weather.size(); i++){// 8 9 11 12
@@ -183,7 +188,7 @@ double get_temp_max_hd(QJsonObject obj, int day){ // receives day(0 - tomorrow .
     return temperature+1;
 }
 
-QString get_weather_description_hd(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+QString get_weather_description_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
     int temp = 0;
     QJsonArray weather = obj["list"].toArray();
     for (int i = 0; i < weather.size(); i++){// 8 9 11 12
@@ -199,3 +204,26 @@ QString get_weather_description_hd(QJsonObject obj, int day){ // receives day(0 
     return ans;
 }
 
+bool city_found(QJsonObject obj){
+    int code = obj["cod"].toInt();
+    if (code == 200){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+double get_temp_hourly(QJsonObject obj, int hour_interval){ // 0 - first, 1 - second ...
+    QJsonArray list = obj["list"].toArray();
+    double temp = list[1+hour_interval].toObject()["main"].toObject()["temp"].toDouble();
+    return temp;
+}
+// 11-15
+QString get_hours(QJsonObject obj, int hour_interval){ // 0 - first, 1 - second ...
+    QJsonArray list = obj["list"].toArray();
+    QString ans = "";
+    for (int i = 0; i < 5; i++){
+        ans += list[1+hour_interval].toObject()["dt_txt"].toString()[11+i];
+    }
+    return ans;
+}

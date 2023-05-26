@@ -5,13 +5,48 @@
 #include "weatherAPI.h"
 #include "timeforuse.h"
 
+void MainWindow::set_wether(QString city, QJsonObject obj,QJsonObject obj_hd ){
+    if (city_found(get_weather_json(city))){
+    ui->TempNow->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" + QString("")+QString::number(get_temp(obj))+QString("°")+ "</span></p></body></html>");
+    ui->WindNow->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString(" ")+QString::number(get_wind_speed(obj))+QString(" м/с")+ "</span></p></body></html>");
+    ui->DayOneTemp->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_d(obj_hd,0))+QString("°")+ "</span></p></body></html>");
+    ui->DayTwoTemp->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_d(obj_hd,1))+QString("°")+ "</span></p></body></html>");
+    ui->DayThreeTemp->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_d(obj_hd,2))+QString("°")+ "</span></p></body></html>");
+    ui->DayFourTemp->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_d(obj_hd,3))+QString("°")+ "</span></p></body></html>");
+    ui->DayOneMin->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_min_d(obj_hd,0))+QString("°")+ "</span></p></body></html>");
+    ui->DayTwoMin->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_min_d(obj_hd,1))+QString("°")+ "</span></p></body></html>");
+    ui->DayThreeMin->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_min_d(obj_hd,2))+QString("°")+ "</span></p></body></html>");
+    ui->DayFourMin->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_min_d(obj_hd,3))+QString("°")+ "</span></p></body></html>");
+    ui->DayOneMax->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_max_d(obj_hd,0))+QString("°")+ "</span></p></body></html>");
+    ui->DayTwoMax->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_max_d(obj_hd,1))+QString("°")+ "</span></p></body></html>");
+    ui->DayThreeMax->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_max_d(obj_hd,2))+QString("°")+ "</span></p></body></html>");
+    ui->DayFourMax->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString::number(get_temp_max_d(obj_hd,3))+QString("°")+ "</span></p></body></html>");//
+    ui->DayOneWeather->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString(get_weather_description_d(obj_hd,0))+ "</span></p></body></html>");
+    ui->DayTwoWeather->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+QString(get_weather_description_d(obj_hd,1))+ "</span></p></body></html>");
+    ui->DayThreeWeather->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+(get_weather_description_d(obj_hd,2))+ "</span></p></body></html>");
+    ui->DayFourWeather->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString("")+(get_weather_description_d(obj_hd,3))+ "</span></p></body></html>");
+    ui->HourOneTemp->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString::number(get_temp_hourly(obj_hd,0))+QString("°")+ "</span></p></body></html>");
+    ui->HourTwoTemp->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString::number(get_temp_hourly(obj_hd,1))+QString("°")+ "</span></p></body></html>");
+    ui->HourThreeTemp->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString::number(get_temp_hourly(obj_hd,2))+QString("°")+ "</span></p></body></html>");
+    double degree = GetWindDirection(get_wind_direct(obj));
+    QPixmap WindPix(":/resources/img/windicon5 (2).png");
+    WindPix = WindPix.transformed(QTransform()
+                                      .translate(ui->WindIcon->x(), ui->WindIcon->y())
+                                      .rotate(degree)
+                                      .translate(-ui->WindIcon->x(), -ui->WindIcon->y()));
+    int w = ui->WindIcon->width();
+    int h = ui->WindIcon->height();
+
+    ui->WindIcon->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+    }
+}
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QString city = "Moscow";
+    QString city = "Москва";
     // Earth Img
     QPixmap pix(":/resources/img/cute_earth.png");
     int w = ui->Earth->width();
@@ -20,37 +55,26 @@ MainWindow::MainWindow(QWidget *parent)
     //
     this->setWindowTitle("WeatherApp");
     // прозрачность кнопки
-    ui->label->setStyleSheet("background: transparent;");
+    ui->DayOne->setStyleSheet("background: transparent;");
     //
     day = new Day;
 
     connect(this, &MainWindow::signal, day, &Day::slot);
     connect(day, &Day::mainwindow, this, &MainWindow::show);
-    ui->label_29->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" + QString("")+QString::number(get_temp(get_weather_json(city)))+QString("°")+ "</span></p></body></html>");
-    ui->label_31->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString(" ")+QString::number(get_wind_speed(get_weather_json(city)))+QString(" м/с")+ "</span></p></body></html>");
-    ui->label_32->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_dotw(0)+QString(", ")+get_day(0)+QString(" ")+get_month()+ "</span></p></body></html>");
-    ui->label->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(1)+QString(" ")+get_day(1) + "</span></p></body></html>");
-    ui->label_2->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(2)+QString(" ")+get_day(2) + "</span></p></body></html>");
-    ui->label_3->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(3)+QString(" ")+get_day(3)+ "</span></p></body></html>");
-    ui->label_4->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(4)+QString(" ")+get_day(4) + "</span></p></body></html>");
-    ui->MondayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),0)));
-    ui->TuesdayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),1)));
-    ui->WednesdayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),2)));
-    ui->ThursdayTemp->setText( QString("")+QString::number(get_temp_hd(get_weather_json_hd(city),3)));
-    ui->MondayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),0)));
-    ui->TuesdayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),1)));
-    ui->WednesdayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),2)));
-    ui->ThursdayMin->setText( QString("")+QString::number(get_temp_min_hd(get_weather_json_hd(city),3)));
-    ui->MondayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),0)));
-    ui->TuesdayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),1)));
-    ui->WednesdayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),2)));
-    ui->ThursdayMax->setText( QString("")+QString::number(get_temp_max_hd(get_weather_json_hd(city),3)));
-    ui->MondayWeather->setText( QString("")+QString(get_weather_description_hd(get_weather_json_hd(city),0)));
-    ui->TuesdayWeather->setText( QString("")+QString(get_weather_description_hd(get_weather_json_hd(city),1)));
-    ui->WednesdayWeather->setText( QString("")+(get_weather_description_hd(get_weather_json_hd(city),2)));
-    ui->ThursdayWeather->setText( QString("")+(get_weather_description_hd(get_weather_json_hd(city),3)));
+    QJsonObject obj = get_weather_json(city);
+    QJsonObject obj_hd = get_weather_json_hd(city);
+    ui->Date->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_dotw(0)+QString(", ")+get_day(0)+QString(" ")+get_month()+ "</span></p></body></html>");
+    ui->DayOne->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(1)+QString(" ")+get_day(1) + "</span></p></body></html>");
+    ui->DayTwo->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(2)+QString(" ")+get_day(2) + "</span></p></body></html>");
+    ui->DayThree->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + get_dotw(3)+QString(" ")+get_day(3)+ "</span></p></body></html>");
+    ui->DayFour->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +get_dotw(4)+QString(" ")+get_day(4) + "</span></p></body></html>");
+    ui->HourOne->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_hours(obj_hd,0)+QString(" ")+ "</span></p></body></html>");
+    ui->HourTwo->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_hours(obj_hd,1)+QString(" ")+ "</span></p></body></html>");
+    ui->HourThree->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +get_hours(obj_hd,2)+ "</span></p></body></html>");
+    ui->SearchLine->setText(city);
+    set_wether(city,obj,obj_hd);
     // wind icon
-    double degree = GetWindDirection(100);
+    double degree = GetWindDirection(get_wind_direct(obj));
     QPixmap WindPix(":/resources/img/windicon5 (2).png");
     WindPix = WindPix.transformed(QTransform()
                                       .translate(ui->WindIcon->x(), ui->WindIcon->y())
@@ -128,6 +152,10 @@ void MainWindow::on_thursday_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString City = ui->SearchLine->text();
+    QString city = ui->SearchLine->text();
+    QJsonObject obj = get_weather_json(city);
+    QJsonObject obj_hd = get_weather_json_hd(city);
+    set_wether(city,obj,obj_hd);
+
 }
 

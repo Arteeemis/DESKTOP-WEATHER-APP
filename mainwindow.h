@@ -16,6 +16,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     double GetWindDirection(double);
+    void set_wether(QString city, QJsonObject obj,QJsonObject obj_hd);
 
 private:
     Ui::MainWindow *ui;
