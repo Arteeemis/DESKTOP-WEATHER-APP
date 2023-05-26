@@ -23,7 +23,7 @@ private:
     Day *day;
 
 signals:
-    void signal();
+    void signal(int DayNumber);
 
 private slots:
     void on_monday_clicked();

@@ -4,6 +4,9 @@
 #include <QDebug>
 #include "weatherAPI.h"
 #include "timeforuse.h"
+#include <QGuiApplication>
+#include <QScreen>
+#include <QMessageBox>
 
 void MainWindow::set_wether(QString city, QJsonObject obj,QJsonObject obj_hd ){
     if (city_found(get_weather_json(city))){
@@ -39,6 +42,10 @@ void MainWindow::set_wether(QString city, QJsonObject obj,QJsonObject obj_hd ){
 
     ui->WindIcon->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
     }
+    else
+    {
+        QMessageBox::critical(this, "Error" ,"Такого города нет, введите другой");
+    }
 }
 
 MainWindow::MainWindow(QWidget *parent)
@@ -46,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    // Initial City
     QString city = "Москва";
     // Earth Img
     QPixmap pix(":/resources/img/cute_earth.png");
@@ -54,9 +62,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Earth->setPixmap(pix.scaled(w, h, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     //
     this->setWindowTitle("WeatherApp");
-    // прозрачность кнопки
-    ui->DayOne->setStyleSheet("background: transparent;");
-    //
+    // Fixed Screen Size
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect  screenGeometry = screen->geometry();
+    int height = screenGeometry.height();
+    int width = screenGeometry.width();
+    int wHeight = this->geometry().height();
+    int wWidth = this->geometry().width();
+    this->setGeometry((width - wWidth) / 2, (height - wHeight) / 2, this->geometry().width(), this->geometry().height());
+    this->setFixedSize(wWidth, wHeight);
+
     day = new Day;
 
     connect(this, &MainWindow::signal, day, &Day::slot);
@@ -108,44 +123,40 @@ double MainWindow::GetWindDirection(double degree)
 
 void MainWindow::on_monday_clicked()
 {
-    day->setStyleSheet("background-color: rgb(247, 147, 30);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal();
+    emit signal(1);
     //закрываем основное окно
     this->close();
 }
 
 void MainWindow::on_tuesday_clicked()
 {
-    day->setStyleSheet("background-color: rgb(127, 205, 238);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal();
+    emit signal(2);
     //закрываем основное окно
     this->close();
 }
 
 void MainWindow::on_wednesday_clicked()
 {
-    day->setStyleSheet("background-color: rgb(7, 64, 123);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal();
+    emit signal(3);
     //закрываем основное окно
     this->close();
 }
 
 void MainWindow::on_thursday_clicked()
 {
-    day->setStyleSheet("background-color: rgb(14, 15, 59);");
     //открываем дополнительное окно
     day->show();
     //вызов сигнала
-    emit signal();
+    emit signal(4);
     //закрываем основное окно
     this->close();
 }
