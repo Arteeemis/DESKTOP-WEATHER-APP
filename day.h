@@ -13,8 +13,8 @@ class Day;
 class Day : public QWidget
 {
     Q_OBJECT
-
 public:
+
     explicit Day(QWidget *parent = nullptr);
     ~Day();
     double GetWindDirection(double);
