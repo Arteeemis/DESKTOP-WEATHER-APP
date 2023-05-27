@@ -28,7 +28,7 @@ void MainWindow::set_weather(QString city, QJsonObject obj,QJsonObject obj_hd ){
     ui->HourOneTemp->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString::number(get_temp_hourly(obj_hd,0))+QString("°")+ "</span></p></body></html>");
     ui->HourTwoTemp->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString::number(get_temp_hourly(obj_hd,1))+QString("°")+ "</span></p></body></html>");
     ui->HourThreeTemp->setText("<html><head/><body><p><span style=\" color:#0e0f3b;\">" +QString::number(get_temp_hourly(obj_hd,2))+QString("°")+ "</span></p></body></html>");
-    double degree = GetWindDirection(get_wind_direct(obj));
+        double degree = GetWindDirection(get_wind_direct(obj));
     QPixmap WindPix(":/resources/img/windicon5 (2).png");
     WindPix = WindPix.transformed(QTransform()
                                       .translate(ui->WindIcon->x(), ui->WindIcon->y())
