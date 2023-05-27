@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>418</width>
-    <height>420</height>
+    <width>448</width>
+    <height>435</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>401</width>
-     <height>401</height>
+     <width>421</width>
+     <height>421</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -93,7 +93,7 @@ border-color: rgb(255, 252, 245);
      <rect>
       <x>50</x>
       <y>60</y>
-      <width>311</width>
+      <width>321</width>
       <height>320</height>
      </rect>
     </property>
@@ -305,6 +305,13 @@ border-color: rgb(255, 252, 245);
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fffcf5;&quot;&gt;Ощущается как:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="WeatherIcon">
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>

@@ -91,6 +91,25 @@ void Day::slot(int DayNumber, QJsonObject obj_hd, QString city)
     int h = ui->WindIconDay->height();
 
     ui->WindIconDay->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+    int code = get_weather_id_d(obj_hd, DayNumber-1);
+    w = ui->WeatherIcon->width();
+    h = ui->WeatherIcon->height();
+    QPixmap Clear(":/resources/img/icons8-sun-48.png");
+    QPixmap Cloudy(":/resources/img/Cloudy.png");
+    QPixmap Rain(":/resources/img/icons8-rain-48.png");
+    QPixmap HeavyRain(":/resources/img/icons8-heavy-rain-48.png");
+    QPixmap PartlyCloudly(":/resources/img/icons8-partly-cloudy-day-48.png");
+    if (code == 800){
+        ui->WeatherIcon->setPixmap(Clear.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+    } else if (code >= 500 && code <= 531 && code != 503){
+         ui->WeatherIcon->setPixmap(Rain.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+    } else if (code == 503){
+         ui->WeatherIcon->setPixmap(HeavyRain.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+    } else if (code >= 802 and code <= 804){
+         ui->WeatherIcon->setPixmap(Cloudy.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+    } else if (code == 801){
+         ui->WeatherIcon->setPixmap(PartlyCloudly.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
+    }
 }
 
 void Day::on_GoBack_clicked()

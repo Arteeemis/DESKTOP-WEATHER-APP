@@ -13,5 +13,11 @@
         <file>img/SB2.png</file>
         <file>img/windiconday.png</file>
         <file>img/Exitbtn.png</file>
+        <file>img/icons8-heavy-rain-48.png</file>
+        <file>img/icons8-partly-cloudy-day-48.png</file>
+        <file>img/icons8-rain-48.png</file>
+        <file>img/icons8-rain-cloud-48.png</file>
+        <file>img/icons8-sun-48.png</file>
+        <file>img/Cloudy.png</file>
     </qresource>
 </RCC>

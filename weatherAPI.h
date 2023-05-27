@@ -31,4 +31,5 @@ double get_humidity_d(QJsonObject obj, int day);
 double get_feels_like_d(QJsonObject obj, int day);
 double get_wind_speed_d(QJsonObject obj, int day);
 double get_wind_direct_d(QJsonObject obj, int day);
+int get_weather_id_d(QJsonObject obj, int day);
 #endif // WEATHERAPI_H

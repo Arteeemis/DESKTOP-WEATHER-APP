@@ -305,4 +305,18 @@ double get_wind_direct_d(QJsonObject obj, int day){ // receives day(0 - tomorrow
     return ans;
 }
 
-
+int get_weather_id_d(QJsonObject obj, int day){ // receives day(0 - tomorrow ... )
+    int temp = 0;
+    QJsonArray weather = obj["list"].toArray();
+    for (int i = 0; i < weather.size(); i++){// 8 9 11 12
+        if (get_day(1) == (QString(weather[i].toObject()["dt_txt"].toString()[8])+QString(weather[i].toObject()["dt_txt"].toString()[9]))) {
+            if (QString(weather[i].toObject()["dt_txt"].toString()[11]) == '1' && QString(weather[i].toObject()["dt_txt"].toString()[12]) =='5'){
+                temp = i+8*day;
+                break;
+            }
+        }
+    }
+    QJsonObject temperature = weather[temp].toObject()["weather"].toArray()[0].toObject();
+    int ans = temperature["id"].toInt();
+    return ans;
+}
