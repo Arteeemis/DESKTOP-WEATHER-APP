@@ -156,9 +156,9 @@ void MainWindow::on_thursday_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString city = ui->SearchLine->text();
-    QJsonObject obj = get_weather_json(city);
-    QJsonObject obj_hd = get_weather_json_hd(city);
+    city = ui->SearchLine->text();
+    obj = get_weather_json(city);
+    obj_hd = get_weather_json_hd(city);
     set_weather(city,obj,obj_hd);
 
 }

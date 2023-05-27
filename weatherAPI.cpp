@@ -284,8 +284,8 @@ double get_wind_speed_d(QJsonObject obj, int day){ // receives day(0 - tomorrow 
             }
         }
     }
-    QJsonObject wind = weather[temp].toObject()["wind"].toArray()[0].toObject();
-    double ans = wind["speed"].toDouble();
+    QJsonObject wind = weather[temp].toObject();
+    double ans = wind["wind"].toObject()["speed"].toDouble();
     return ans;
 }
 
@@ -300,7 +300,9 @@ double get_wind_direct_d(QJsonObject obj, int day){ // receives day(0 - tomorrow
             }
         }
     }
-    QJsonObject wind = weather[temp].toObject()["wind"].toArray()[0].toObject();
-    double ans = wind["deg"].toDouble();
+    QJsonObject wind = weather[temp].toObject();
+    double ans = wind["wind"].toObject()["deg"].toDouble();
     return ans;
 }
+
+

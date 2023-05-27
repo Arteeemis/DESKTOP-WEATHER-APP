@@ -15,16 +15,7 @@ Day::Day(QWidget *parent) :
     // wind icon
     //QJsonObject obj = get_weather_json();
     // ПОМЕНЯТЬ ПАРАМЕТР ФУНКЦИИ GetWindDirection
-    double degree = GetWindDirection(100);
-    QPixmap WindPix(":/resources/img/windiconday.png");
-    WindPix = WindPix.transformed(QTransform()
-                                      .translate(ui->WindIconDay->x(), ui->WindIconDay->y())
-                                      .rotate(degree)
-                                      .translate(-ui->WindIconDay->x(), -ui->WindIconDay->y()));
-    int w = ui->WindIconDay->width();
-    int h = ui->WindIconDay->height();
 
-    ui->WindIconDay->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
 }
 
 Day::~Day()
@@ -83,14 +74,23 @@ void Day::slot(int DayNumber, QJsonObject obj_hd, QString city)
     }
 
     // В скобочки нужно будет передавать реальные параметры - API
-    ui->CityData->setText(city);
-    ui->DateData->setText(QString(get_day(DayNumber)));
-    ui->TempData->setText(QString::number(get_temp_d(obj_hd,DayNumber-1)));
-    ui->PressureData->setText(QString::number(get_pressure_d(obj_hd,DayNumber-1)));
-    ui->HumidityData->setText(QString::number(get_humidity_d(obj_hd,DayNumber-1))+QString(" %"));
-    ui->FeelsLikeData->setText(QString::number(get_feels_like_d(obj_hd,DayNumber-1)));
-//    ui->WindSpeed->setText(QString::number(get_wind_speed_d(obj_hd,DayNumber-1)));
+    ui->CityData->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + city+ "</span></p></body></html>");
+    ui->DateData->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" + QString(get_day(DayNumber)) + "</span></p></body></html>");
+    ui->TempData->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +QString::number(get_temp_d(obj_hd,DayNumber-1))+ "</span></p></body></html>");
+    ui->PressureData->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +QString::number(get_pressure_d(obj_hd,DayNumber-1))+ "</span></p></body></html>");
+    ui->HumidityData->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +QString::number(get_humidity_d(obj_hd,DayNumber-1))+QString(" %")+ "</span></p></body></html>");
+    ui->FeelsLikeData->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +QString::number(get_feels_like_d(obj_hd,DayNumber-1))+ "</span></p></body></html>");
+    ui->WindData->setText("<html><head/><body><p><span style=\" color:#fffcf5;\">" +QString::number(get_wind_speed_d(obj_hd,DayNumber-1))+ "</span></p></body></html>");
+    double degree = GetWindDirection(get_wind_direct_d(obj_hd,DayNumber-1));
+    QPixmap WindPix(":/resources/img/windiconday.png");
+    WindPix = WindPix.transformed(QTransform()
+                                      .translate(ui->WindIconDay->x(), ui->WindIconDay->y())
+                                      .rotate(degree)
+                                      .translate(-ui->WindIconDay->x(), -ui->WindIconDay->y()));
+    int w = ui->WindIconDay->width();
+    int h = ui->WindIconDay->height();
 
+    ui->WindIconDay->setPixmap(WindPix.scaled(w, h, Qt::KeepAspectRatio,  Qt::SmoothTransformation));
 }
 
 void Day::on_GoBack_clicked()
