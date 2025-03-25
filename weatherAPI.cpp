@@ -2,8 +2,8 @@
 #include "timeforuse.h"
 
 QJsonObject get_weather_json(QString city){
-    QString baseUrl = "https://api.openweathermap.org/data/2.5/weather";
-    QString apiKey = "bfa8d426b626bbfadae0dfb17496323c";
+    QString baseUrl = "your_api_key";
+    QString apiKey = "your_api_key";
     QUrlQuery query;
     query.addQueryItem("q", city);
     query.addQueryItem("appid", apiKey);
